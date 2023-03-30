@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructive Assignment</title>
+</head>
+<body>
+       
+     <div class="post">
+       <h2 class="title">Post 1</h2>
+         <p class="author">John Doe</p>
+
+     </div>
+
+     <div class="post">
+        <h2 class="title">Post 2</h2>
+          <p class="author">Jane Smith</p>
+ 
+     </div>
+
+    <script>
+        
+       const posts = document.querySelectorAll(".post");
+       const titles = [];
+       const authors = [];
+       posts.forEach(post => {
+        const {textContent: title} = post.querySelector(".title");
+        const {textContent: author} = post.querySelector(".author");
+        titles.push(title);
+        authors.push(author);
+
+       } )
+
+        console.log(titles);
+        console.log(authors);
+        
+    </script>
+</body>
+</html>
